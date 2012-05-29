@@ -36,9 +36,14 @@ The REST service have a BASIC authentication with your accountid as username and
 Sandbox
 ====================
 It is also possible to make calls to our sandbox account. In order to revieve access to the sandbox just send an email
-to us support@pospecteye.comand asking for access and what you want to try out.
+to us support@pospecteye.com and asking for access and what you want to try out.
 
 Limitations
 ====================
 The is currently no limitation on number of calls to our API
+
+Examples
+====================
+
+
 
