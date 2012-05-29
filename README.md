@@ -12,7 +12,7 @@ ProspectEye delivers each visit with company information such as company name, t
 What is possible with the REST API?
 ====================
 
-The following information can you recieve from the API
+The following information can be recieved from the API
 
 - visits
 - users
