@@ -14,10 +14,10 @@ What is possible with the REST API?
 
 The following information can be recieved from the API
 
-- visits
-- users
-- companystatus
-
+- Visits
+- Accounts/Users
+- Companystatus
+- Reports
 
 The REST service is based on CRUD thus the following commands are allowed
 
