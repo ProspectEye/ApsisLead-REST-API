@@ -67,13 +67,85 @@ a timeframe.
 
 `GET http://api.prospecteye.com/visits/aftervisit`
 
+`Params: visitid, limit, withpageviews`
+
+Response:
+
+```
+{
+  'Success': true,
+  'visits' : [
+    {
+      'name': 'Company name',
+      'companytype': 2
+      ...
+      'timespent': 1000
+    } 
+  ]
+}
+```
+
+
+`GET http://api.prospecteye.com/visits/betweendates`
+
+`Params: startdate, enddate, limit`
+
 REST/Filter
 --------------------
 
+Get all filters
+`GET http://api.prospecteye.com/filter`
+
+Get a filter by id
+`GET http://api.prospecteye.com/filter/:id`
 
 REST/Companytype
 --------------------
 
+There are 6 kinds of statuses on a visitor in ProspectEye
+
+1. Customer
+2. Prospect
+3. Suspect
+4. Partner
+5. Something
+6. Other
+
+Get all companystatuses
+
+`GET http://api.prospecteye.com/companytype`
+
+Get a companystatus by id
+
+`GET http://api.prospecteye.com/companytype/:id`
+
+Insert new status
+
+`POST http://api.prospecteye.com/companytype/`
+
+Post data:
+```
+{
+  companyid: 10001,
+  userid: 10001,
+  type: 3
+}
+```
+
+Update a companystatus with user and/or type
+
+`PUT http://api.prospecteye.com/companytype/:companyid`
+
+Put data:
+```
+{
+  userid: 10001,
+  type: 3
+}
+```
+
 
 REST/Apikey
 --------------------
+
+`GET http://api.prospecteye.com/apikey/:username/:password`
