@@ -15,9 +15,9 @@ What is possible with the REST API?
 The following information can be recieved from the API
 
 - Visits
-- Accounts/Users
+- Filter
 - Companystatus
-- Reports
+- Apikey
 
 The REST service is based on CRUD thus the following commands are allowed
 
@@ -40,10 +40,40 @@ to us support@pospecteye.com and asking for access and what you want to try out.
 
 Limitations
 ====================
-The is currently no limitation on number of calls to our API
+The is currently no limitation on number of calls to our API.
+
+Errorhandling
+====================
+All responses comes with a "Success" attribute that is either true or false. If "Success" is false an error message
+always present in the attribute "Error".
+
+Format
+====================
+The REST API supports both JSON and XML. JSON is standard of you dont specify anything else.
+
+example for json response:
+http://api.prospecteye.com/rest/companytype.json
+
+example for xml response:
+http://api.prospecteye.com/rest/companytype.xml
 
 Examples
 ====================
 
+REST/Visits
+--------------------
+It's possible to get visits in two ways. Either by specifing the first visitid you want to start search from or by specifing
+a timeframe.
+
+`GET http://api.prospecteye.com/visits/aftervisit`
+
+REST/Filter
+--------------------
 
 
+REST/Companytype
+--------------------
+
+
+REST/Apikey
+--------------------
