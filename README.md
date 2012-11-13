@@ -65,7 +65,7 @@ REST/Visits
 It's possible to get visits in two ways. Either by specifing the first visitid you want to start search from or by specifing
 a timeframe.
 
-`GET http://api.prospecteye.com/visits/aftervisit`
+`GET http://api.prospecteye.com/rest/visits/aftervisit`
 
 `Params: visitid, limit, withpageviews`
 
@@ -86,7 +86,7 @@ Response:
 ```
 
 
-`GET http://api.prospecteye.com/visits/betweendates`
+`GET http://api.prospecteye.com/rest/visits/betweendates`
 
 `Params: startdate, enddate, limit`
 
@@ -94,10 +94,10 @@ REST/Filter
 --------------------
 
 Get all filters
-`GET http://api.prospecteye.com/filter`
+`GET http://api.prospecteye.com/rest/filter`
 
 Get a filter by id
-`GET http://api.prospecteye.com/filter/:id`
+`GET http://api.prospecteye.com/rest/filter/:id`
 
 REST/Companytype
 --------------------
@@ -113,15 +113,15 @@ There are 6 kinds of statuses on a visitor in ProspectEye
 
 Get all companystatuses
 
-`GET http://api.prospecteye.com/companytype`
+`GET http://api.prospecteye.com/rest/companytype`
 
 Get a companystatus by id
 
-`GET http://api.prospecteye.com/companytype/:id`
+`GET http://api.prospecteye.com/rest/companytype/:id`
 
 Insert new status
 
-`POST http://api.prospecteye.com/companytype/`
+`POST http://api.prospecteye.com/rest/companytype/`
 
 Post data:
 ```
@@ -134,7 +134,7 @@ Post data:
 
 Update a companystatus with user and/or type
 
-`PUT http://api.prospecteye.com/companytype/:companyid`
+`PUT http://api.prospecteye.com/rest/companytype/:companyid`
 
 Put data:
 ```
@@ -148,4 +148,4 @@ Put data:
 REST/Apikey
 --------------------
 
-`GET http://api.prospecteye.com/apikey/:username/:password`
+`GET http://api.prospecteye.com/rest/apikey/:username/:password`
