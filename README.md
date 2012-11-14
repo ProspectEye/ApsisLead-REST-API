@@ -67,7 +67,7 @@ a timeframe.
 
 `GET http://api.prospecteye.com/rest/visits/aftervisit`
 
-`Params: visitid (int), limit (int), withpageviews (boolean)`
+`Params: visitid (int), limit (int), step (int), withpageviews (boolean)`
 
 Response:
 

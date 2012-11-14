@@ -39,7 +39,7 @@
 	}
 
 	function getVisits() {
-		return GET("visits/aftervisit", array("limit" => 1));
+		return GET("visits/aftervisit", array("limit" => 1, "step" => 0));
 	}
 
 	function getCompanyType() {
