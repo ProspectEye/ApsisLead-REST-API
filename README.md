@@ -67,7 +67,7 @@ a timeframe.
 
 `GET http://api.prospecteye.com/rest/visits/aftervisit`
 
-`Params: visitid, limit, withpageviews`
+`Params: visitid (int), limit (int), withpageviews (boolean)`
 
 Response:
 
@@ -88,7 +88,7 @@ Response:
 
 `GET http://api.prospecteye.com/rest/visits/betweendates`
 
-`Params: startdate, enddate, limit`
+`Params: startdate (ex 2012-11-03), enddate (date), limit (int)`
 
 REST/Filter
 --------------------
