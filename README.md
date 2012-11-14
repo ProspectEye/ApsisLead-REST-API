@@ -148,4 +148,8 @@ Put data:
 REST/Apikey
 --------------------
 
-`GET http://api.prospecteye.com/rest/apikey/:username/:password`
+Get API key and accountid with you standard Login
+
+`GET http://api.prospecteye.com/rest/apikey/`
+
+`Params: usermail (string), password (string)`
