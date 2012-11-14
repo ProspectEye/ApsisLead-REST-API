@@ -1,3 +1,7 @@
+#
+# Install Reqests to be able to run this script
+# http://docs.python-requests.org/en/latest/
+#
 import requests
 import json
 
