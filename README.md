@@ -17,6 +17,7 @@ The following information can be recieved from the API
 - Visits
 - Filter
 - Companystatus
+- Settings
 - Apikey
 
 The REST service is based on CRUD thus the following commands are allowed
@@ -90,6 +91,11 @@ Response:
 
 `Params: startdate (ex 2012-11-03), enddate (date), limit (int)`
 
+
+`GET http://api.prospecteye.com/rest/visits/search`
+
+`Params: query (ex "ProspectEye AB")
+
 REST/Filter
 --------------------
 
@@ -144,11 +150,20 @@ Put data:
 }
 ```
 
+REST/Settings
+--------------------
+
+Get settings for user-id
+
+`GET http://api.prospecteye.com/rest/settings/:userid`
+
+`Params: userid (int)
+
 
 REST/Apikey
 --------------------
 
-Get API key and accountid with you standard Login
+Get API-key, accountid and userid with you standard Login
 
 `GET http://api.prospecteye.com/rest/apikey/`
 
