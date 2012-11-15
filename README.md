@@ -94,7 +94,7 @@ Response:
 
 `GET http://api.prospecteye.com/rest/visits/search`
 
-`Params: query (ex "ProspectEye AB")
+`Params: query (ex "ProspectEye AB")`
 
 REST/Filter
 --------------------
@@ -157,7 +157,7 @@ Get settings for user-id
 
 `GET http://api.prospecteye.com/rest/settings/:userid`
 
-`Params: userid (int)
+`Params: userid (int)`
 
 
 REST/Apikey
