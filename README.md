@@ -157,8 +157,6 @@ Get settings for user-id
 
 `GET http://api.prospecteye.com/rest/settings/:userid`
 
-`Params: userid (int)`
-
 
 REST/Apikey
 --------------------
