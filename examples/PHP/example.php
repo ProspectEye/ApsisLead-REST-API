@@ -14,11 +14,21 @@
 	if(isset($data->accountid))
 		$ACCOUNT_ID = $data->accountid;
 
+	$userId = 0;
+	if(isset($data->userid))
+		$userId = $data->userid;
+
+	$data = getSettings($userId);
+	print_r($data);	
+
 	$data = getFilter();
 	print_r($data);	
 
 	$data = getVisits();
 	print_r($data);	
+
+	$data = getVisitSearch("ProspectEye AB");
+	print_r($data);		
 
 	$data = getCompanyType();
 	print_r($data);	
@@ -42,9 +52,22 @@
 		return GET("visits/aftervisit", array("limit" => 1, "step" => 0));
 	}
 
+	function getVisitSearch($sQuery) {
+		return GET("visits/search", array("query" => $sQuery));	
+	}
+
 	function getCompanyType() {
 		return GET("companytype", NULL);
-	}	
+	}
+
+	function getSettings($userId = 0) {
+		$sUrl = "settings";
+		if($userId > 0) {
+			$sUrl .= "/$userId";
+		}
+
+		return GET($sUrl, NULL);
+	}
 
 	/* Helper function for GET-calls */
 	function GET($sUrl, $params = NULL) {
