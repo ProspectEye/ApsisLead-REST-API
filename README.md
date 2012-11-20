@@ -96,6 +96,8 @@ Response:
 
 `Params: query (ex "ProspectEye AB")`
 
+`GET http://api.prospecteye.com/rest/visits/lead/:filterid`
+
 REST/Filter
 --------------------
 

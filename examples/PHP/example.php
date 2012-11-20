@@ -27,6 +27,9 @@
 	$data = getVisits();
 	print_r($data);	
 
+	$data = getLeads();
+	print_r($data);		
+
 	$data = getVisitSearch("ProspectEye AB");
 	print_r($data);		
 
@@ -50,6 +53,10 @@
 
 	function getVisits() {
 		return GET("visits/aftervisit", array("limit" => 1, "step" => 0));
+	}
+
+	function getLeads() {
+		return GET("visits/lead", NULL);	
 	}
 
 	function getVisitSearch($sQuery) {
