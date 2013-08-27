@@ -19,10 +19,10 @@
 		$userId = $data->userid;
 
 	$data = getSettings($userId);
-	print_r($data);	
+	print_r($data);
 
 	$data = getFilter();
-	print_r($data);	
+	print_r($data);
 
 	$data = getVisits();
 	print_r($data);	
@@ -34,7 +34,17 @@
 	print_r($data);		
 
 	$data = getCompanyType();
-	print_r($data);	
+	print_r($data);
+
+	$data = getTriggers(NULL, 4);
+	print_r($data);
+	exit();
+
+	$data = getTriggers();
+	print_r($data);
+
+	$data = getEvents(0/*TriggerId*/,NULL/*EventId*/,0/*bWithPageview*/);
+	print_r($data);
 
 	/* Fetch API-key and AccountId based on your login in ProspectEye */
 	function getApiKey($usermail = "", $password = "") {
@@ -53,6 +63,10 @@
 
 	function getVisits() {
 		return GET("visits/aftervisit", array("limit" => 1, "step" => 0));
+	}
+
+	function getVisitDetails($visitId) {
+		return GET("visits/details/$visitId", NULL);
 	}
 
 	function getLeads() {
@@ -74,6 +88,35 @@
 		}
 
 		return GET($sUrl, NULL);
+	}
+
+	function getTriggers($triggerId = 0, $type = NULL) {
+		$sUrl = "trigger";
+		if($triggerId > 0) {
+			$sUrl .= "/$triggerId";
+		}
+
+		$params = NULL;
+		if($type != NULL) {
+			$params = array("type" => $type);
+		}
+		return GET($sUrl, $params);	
+	}
+
+	function getEvents($triggerId = 0, $eventId = NULL, $bWithPageview = 0) {
+		$sUrl = "event";
+		if($triggerId > 0) {
+			$sUrl .= "/$triggerId";
+		}
+
+		$params = array();
+		if($eventId != NULL) {
+			$params["eventid"] = $eventId;
+		}
+		if($bWithPageview != NULL) {
+			$params["withpageview"] = $bWithPageview;
+		}		
+		return GET($sUrl, $params);	
 	}
 
 	/* Helper function for GET-calls */

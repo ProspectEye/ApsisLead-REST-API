@@ -19,6 +19,8 @@ The following information can be recieved from the API
 - Companystatus
 - Settings
 - Apikey
+- Trigger
+- Event
 
 The REST service is based on CRUD thus the following commands are allowed
 
@@ -106,6 +108,32 @@ Get all filters
 
 Get a filter by id
 `GET http://api.prospecteye.com/rest/filter/:id`
+
+REST/Trigger
+--------------------
+
+There are 4 kinds of types if triggers
+
+1. Email Trigger
+2. Email Sending
+3. Webhook
+4. CRM Trigger
+
+Get all triggers
+`GET http://api.prospecteye.com/rest/trigger`
+
+`Params: type (integer)`
+
+Get a trigger by id
+`GET http://api.prospecteye.com/rest/trigger/:id`
+
+REST/Event
+--------------------
+
+Get all events by trigger id
+`GET http://api.prospecteye.com/rest/event/:triggerid`
+
+`Params: eventid (integer), withpageview (integer 0|1)`
 
 REST/Companytype
 --------------------
