@@ -98,7 +98,9 @@ Response:
 
 `Params: query (ex "ProspectEye AB")`
 
-`GET http://api.prospecteye.com/rest/visits/lead/:filterid`
+You can also get more details about a visit with `visits/details`. Here you will also get all company information
+
+`GET http://api.prospecteye.com/rest/visits/details/:visitid`
 
 REST/Filter
 --------------------
