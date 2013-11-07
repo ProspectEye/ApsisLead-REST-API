@@ -142,11 +142,11 @@ REST/Companytype
 
 There are 6 kinds of statuses on a visitor in ProspectEye
 
-1. Customer
-2. Prospect
-3. Suspect
-4. Partner
-5. Something
+1. Prospect
+2. Customer
+3. Partner
+4. Competitor
+5. Supplier
 6. Other
 
 Get all companystatuses
