@@ -135,7 +135,7 @@ REST/Event
 Get all events by trigger id
 `GET http://api.prospecteye.com/rest/event/:triggerid`
 
-`Params: eventid (integer), withpageview (integer 0|1)`
+`Params: eventid (integer), withpageview (integer 0|1), sortorder ('ASC'|'DESC')`
 
 REST/Companytype
 --------------------
