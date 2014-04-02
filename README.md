@@ -43,7 +43,7 @@ to us support@pospecteye.com and asking for access and what you want to try out.
 
 Limitations
 ====================
-The is currently no limitation on number of calls to our API.
+The is currently no limitation on number of calls to our API. We recommend that polling occur once every 5 minutes. If polling exceed this recommendation we have the authority too close your access.
 
 Errorhandling
 ====================
