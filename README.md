@@ -16,6 +16,7 @@ The following information can be recieved from the API
 
 - Visits
 - Filter
+- Company
 - Companystatus
 - Settings
 - Apikey
@@ -169,7 +170,7 @@ Get a companystatus by companyid
 
 Get a companystatus by registerednumber
 
-`GET http://api.prospecteye.com/rest/companytype/registerednumber/:companyid`
+`GET http://api.prospecteye.com/rest/companytype/registerednumber/:registerednumber`
 
 Insert new status
 
