@@ -70,7 +70,7 @@ a timeframe.
 
 `GET http://api.prospecteye.com/rest/visits/aftervisit`
 
-`Params: visitid (int), limit (int), step (int), withpageviews (boolean)`
+`Params: visitid (int), limit (int), step (int), filterid (int), withpageviews (boolean)`
 
 Response:
 
@@ -91,7 +91,7 @@ Response:
 
 `GET http://api.prospecteye.com/rest/visits/betweendates`
 
-`Params: startdate (ex 2012-11-03), enddate (date), limit (int)`
+`Params: startdate (ex 2012-11-03), enddate (date), limit (int), step (int), filterid (int), withpageviews (boolean)`
 
 
 `GET http://api.prospecteye.com/rest/visits/search`
@@ -137,6 +137,16 @@ Get all events by trigger id
 
 `Params: eventid (integer), withpageview (integer 0|1), sortorder ('ASC'|'DESC')`
 
+REST/Company
+--------------------
+
+Get a company by companyid that have visited your site
+`GET http://api.prospecteye.com/rest/company/:companyid`
+
+or by registerednumber
+
+`GET http://api.prospecteye.com/rest/company/registerednumber/:registerednumber`
+
 REST/Companytype
 --------------------
 
@@ -153,9 +163,13 @@ Get all companystatuses
 
 `GET http://api.prospecteye.com/rest/companytype`
 
-Get a companystatus by id
+Get a companystatus by companyid
 
-`GET http://api.prospecteye.com/rest/companytype/:id`
+`GET http://api.prospecteye.com/rest/companytype/:companyid`
+
+Get a companystatus by registerednumber
+
+`GET http://api.prospecteye.com/rest/companytype/registerednumber/:companyid`
 
 Insert new status
 
@@ -166,7 +180,8 @@ Post data:
 {
   companyid: 10001,
   userid: 10001,
-  type: 3
+  type: 3,
+  registerednumber: 5512123434 (optional)
 }
 ```
 
@@ -181,6 +196,10 @@ Put data:
   type: 3
 }
 ```
+
+Update a companystatus with user and/or type by registerednumber
+
+`PUT http://api.prospecteye.com/rest/companytype/registerednumber/:registerednumber`
 
 REST/Settings
 --------------------
