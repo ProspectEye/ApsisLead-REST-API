@@ -1,13 +1,13 @@
-ApsisLead REST API
+Apsis Lead REST API
 ====================
 
-Hello and welcome to ApsisLead REST API. This document includes tutorials and documentation how to use our API.
+Hello and welcome to Apsis Lead REST API. This document includes tutorials and documentation how to use our API.
 
-What is ApsisLead
+What is Apsis Lead
 ====================
 
 http://www.apsislead.com is a webbased BI-system that tracks all visitors on your webpage and presents them as prospects.
-ApsisLead delivers each visit with company information such as company name, telephone numbers, descision makers etc.
+Apsis Lead delivers each visit with company information such as company name, telephone numbers, descision makers etc.
 
 What is possible with the REST API?
 ====================
@@ -27,7 +27,7 @@ Every endpoint allows GET requests, some endpoints allow POST and UPDATE request
 
 API keys and Authentication
 ====================
-To be able to make calls to the REST service ones need an API-key. To be able to recieve an API-key you have to be a customer to ApsisLead.
+To be able to make calls to the REST service ones need an API-key. To be able to recieve an API-key you have to be a customer to Apsis Lead.
 Once a customer you can generate a API-key from the Prospectey client. Go to settings->Addins and klick the API-key generate button.
 
 The REST service have a BASIC authentication with your accountid as username and API-key as password.
@@ -146,7 +146,7 @@ or by registerednumber
 REST/Companytype
 --------------------
 
-There are 6 kinds of statuses on a visitor in ApsisLead
+There are 6 kinds of statuses on a visitor in Apsis Lead
 
 1. Prospect
 2. Customer
