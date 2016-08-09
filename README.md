@@ -23,12 +23,7 @@ The following information can be recieved from the API
 - Trigger
 - Event
 
-The REST service is based on CRUD thus the following commands are allowed
-
-- GET
-- POST
-- UPDATE
-- DELETE
+Every endpoint allows GET requests, some endpoints allow POST and UPDATE requests, please look at the end of this document for examples
 
 API keys and Authentication
 ====================
