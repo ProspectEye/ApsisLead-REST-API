@@ -7,7 +7,7 @@ import json
 
 API_KEY = "ENTER_API_KEY_HERE"
 ACCOUNT_ID = "ENTER_ACCOUNTID_HERE"
-REST_HOST = "http://api.prospecteye.com/rest/"
+REST_HOST = "http://api.apsislead.com/rest/"
 
 def getApiKey(usermail = "", password = ""):
 	result = requests.get(REST_HOST + "apikey?usermail=" + usermail + "&password=" + password)
@@ -22,11 +22,11 @@ def getFilter(filterId = 0):
 
 def getVisits(limit = 10):
 	result = requests.get(REST_HOST + "visits/aftervisit?limit=" + "{0}".format(limit), auth=(ACCOUNT_ID, API_KEY))
-	return result.json	
+	return result.json
 
 def getCompanyType():
 	result = requests.get(REST_HOST + "companytype", auth=(ACCOUNT_ID, API_KEY))
-	return result.json	
+	return result.json
 
 
 if __name__ == '__main__':

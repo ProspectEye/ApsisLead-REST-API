@@ -3,14 +3,14 @@
 	$API_KEY = "ENTER_API_KEY_HERE";
 	$ACCOUNT_ID = "ENTER_ACCOUNTID_HERE";
 
-	DEFINE("REST_HOST","http://api.prospecteye.com/rest/");
+	DEFINE("REST_HOST","http://api.apsislead.com/rest/");
 
 	$data = getApiKey("your@email.com", "your_account_password_here");
 	print_r($data);
 
 	if(isset($data->apikey))
 		$API_KEY = $data->apikey;
-	
+
 	if(isset($data->accountid))
 		$ACCOUNT_ID = $data->accountid;
 
@@ -25,13 +25,13 @@
 	print_r($data);
 
 	$data = getVisits();
-	print_r($data);	
+	print_r($data);
 
 	$data = getLeads();
-	print_r($data);		
+	print_r($data);
 
 	$data = getVisitSearch("ProspectEye AB");
-	print_r($data);		
+	print_r($data);
 
 	$data = getCompanyType();
 	print_r($data);
@@ -70,11 +70,11 @@
 	}
 
 	function getLeads() {
-		return GET("visits/lead", NULL);	
+		return GET("visits/lead", NULL);
 	}
 
 	function getVisitSearch($sQuery) {
-		return GET("visits/search", array("query" => $sQuery));	
+		return GET("visits/search", array("query" => $sQuery));
 	}
 
 	function getCompanyType() {
@@ -100,7 +100,7 @@
 		if($type != NULL) {
 			$params = array("type" => $type);
 		}
-		return GET($sUrl, $params);	
+		return GET($sUrl, $params);
 	}
 
 	function getEvents($triggerId = 0, $eventId = NULL, $bWithPageview = 0) {
@@ -115,8 +115,8 @@
 		}
 		if($bWithPageview != NULL) {
 			$params["withpageview"] = $bWithPageview;
-		}		
-		return GET($sUrl, $params);	
+		}
+		return GET($sUrl, $params);
 	}
 
 	/* Helper function for GET-calls */
@@ -140,17 +140,17 @@
 
 	    $cUrl = curl_init();
 	    curl_setopt($cUrl, CURLOPT_RETURNTRANSFER, 1);
-	    curl_setopt($cUrl, CURLOPT_HTTPAUTH,CURLAUTH_BASIC); 
-	    curl_setopt($cUrl, CURLOPT_USERPWD, "$ACCOUNT_ID:$API_KEY"); 
+	    curl_setopt($cUrl, CURLOPT_HTTPAUTH,CURLAUTH_BASIC);
+	    curl_setopt($cUrl, CURLOPT_USERPWD, "$ACCOUNT_ID:$API_KEY");
 	    curl_setopt($cUrl, CURLOPT_HTTPHEADER, array('Accept: application/json', 'Content-Type: application/json'));
 		curl_setopt($cUrl, CURLOPT_CUSTOMREQUEST, $sMethod);
 
 		/*if($data != "" && $data != NULL)
 			curl_setopt($cUrl, CURLOPT_POSTFIELDS,http_build_query($data));*/
 
-	    curl_setopt($cUrl, CURLOPT_URL, REST_HOST . $sUrl);         
+	    curl_setopt($cUrl, CURLOPT_URL, REST_HOST . $sUrl);
 	    $sResponse = curl_exec($cUrl);
-	    curl_close($cUrl);   
+	    curl_close($cUrl);
 
 	    return json_decode($sResponse);
 	}
