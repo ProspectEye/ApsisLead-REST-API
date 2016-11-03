@@ -16,12 +16,11 @@ The following information can be recieved from the API
 
 - Visits
 - Filter
+- Conversion
 - Company
 - Companystatus
 - Settings
 - Apikey
-- Trigger
-- Event
 
 The REST service is based on CRUD thus the following commands are allowed
 
@@ -112,31 +111,33 @@ Get all filters
 Get a filter by id
 `GET http://api.prospecteye.com/rest/filter/:id`
 
-REST/Trigger
+REST/Conversion
 --------------------
 
-There are 4 kinds of types if triggers
+Get all conversions
+`GET http://api.prospecteye.com/rest/conversion`
 
-1. Email Trigger
-2. Email Sending
-3. Webhook
-4. CRM Trigger
+`Params: limit (integer), step (integer)`
 
-Get all triggers
-`GET http://api.prospecteye.com/rest/trigger`
+Get all conversions after a specific conversion-id
+`GET http://api.prospecteye.com/rest/conversion/afterid/:id`
 
-`Params: type (integer)`
+`Params: id (integer), limit (integer), step (integer)`
 
-Get a trigger by id
-`GET http://api.prospecteye.com/rest/trigger/:id`
+Get all conversions between dates
+`GET http://api.prospecteye.com/rest/conversion/betweendates`
 
-REST/Event
---------------------
+`Params: startdate (date), enddate (date), limit (integer), step (integer)`
 
-Get all events by trigger id
-`GET http://api.prospecteye.com/rest/event/:triggerid`
+Get conversions for a specific form
+`GET http://api.prospecteye.com/rest/conversion/:formId`
 
-`Params: eventid (integer), withpageview (integer 0|1), sortorder ('ASC'|'DESC')`
+`Params: limit (integer), step (integer)`
+
+Get conversions for a specific form and for a specific email
+`GET http://api.prospecteye.com/rest/conversion/:formId/:email`
+
+`Params: limit (integer), step (integer)`
 
 REST/Company
 --------------------
