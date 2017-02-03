@@ -55,10 +55,10 @@ Format
 The REST API supports both JSON and XML. JSON is standard of you dont specify anything else.
 
 example for json response:
-http://api.prospecteye.com/rest/companytype.json
+http://api.apsislead.com/rest/companytype.json
 
 example for xml response:
-http://api.prospecteye.com/rest/companytype.xml
+http://api.apsislead.com/rest/companytype.xml
 
 Examples
 ====================
@@ -68,7 +68,7 @@ REST/Visits
 It's possible to get visits in two ways. Either by specifing the first visitid you want to start search from or by specifing
 a timeframe.
 
-`GET http://api.prospecteye.com/rest/visits/aftervisit`
+`GET http://api.apsislead.com/rest/visits/aftervisit`
 
 `Params: visitid (int), limit (int), step (int), filterid (int), withpageviews (boolean)`
 
@@ -89,53 +89,53 @@ Response:
 ```
 
 
-`GET http://api.prospecteye.com/rest/visits/betweendates`
+`GET http://api.apsislead.com/rest/visits/betweendates`
 
 `Params: startdate (ex 2012-11-03), enddate (date), limit (int), step (int), filterid (int), withpageviews (boolean)`
 
 
-`GET http://api.prospecteye.com/rest/visits/search`
+`GET http://api.apsislead.com/rest/visits/search`
 
 `Params: query (ex "ProspectEye AB")`
 
 You can also get more details about a visit with `visits/details`. Here you will also get all company information
 
-`GET http://api.prospecteye.com/rest/visits/details/:visitid`
+`GET http://api.apsislead.com/rest/visits/details/:visitid`
 
 REST/Filter
 --------------------
 
 Get all filters
-`GET http://api.prospecteye.com/rest/filter`
+`GET http://api.apsislead.com/rest/filter`
 
 Get a filter by id
-`GET http://api.prospecteye.com/rest/filter/:id`
+`GET http://api.apsislead.com/rest/filter/:id`
 
 REST/Conversion
 --------------------
 
 Get all conversions
-`GET http://api.prospecteye.com/rest/conversion`
+`GET http://api.apsislead.com/rest/conversion`
 
 `Params: limit (integer), step (integer)`
 
 Get all conversions after a specific conversion-id
-`GET http://api.prospecteye.com/rest/conversion/afterid/:id`
+`GET http://api.apsislead.com/rest/conversion/afterid/:id`
 
 `Params: id (integer), limit (integer), step (integer)`
 
 Get all conversions between dates
-`GET http://api.prospecteye.com/rest/conversion/betweendates`
+`GET http://api.apsislead.com/rest/conversion/betweendates`
 
 `Params: startdate (date), enddate (date), limit (integer), step (integer)`
 
 Get conversions for a specific form
-`GET http://api.prospecteye.com/rest/conversion/:formId`
+`GET http://api.apsislead.com/rest/conversion/:formId`
 
 `Params: limit (integer), step (integer)`
 
 Get conversions for a specific form and for a specific email
-`GET http://api.prospecteye.com/rest/conversion/:formId/:email`
+`GET http://api.apsislead.com/rest/conversion/:formId/:email`
 
 `Params: limit (integer), step (integer)`
 
@@ -143,11 +143,11 @@ REST/Company
 --------------------
 
 Get a company by companyid that have visited your site
-`GET http://api.prospecteye.com/rest/company/:companyid`
+`GET http://api.apsislead.com/rest/company/:companyid`
 
 or by registerednumber
 
-`GET http://api.prospecteye.com/rest/company/registerednumber/:registerednumber`
+`GET http://api.apsislead.com/rest/company/registerednumber/:registerednumber`
 
 REST/Companytype
 --------------------
@@ -163,19 +163,19 @@ There are 6 kinds of statuses on a visitor in ProspectEye
 
 Get all companystatuses
 
-`GET http://api.prospecteye.com/rest/companytype`
+`GET http://api.apsislead.com/rest/companytype`
 
 Get a companystatus by companyid
 
-`GET http://api.prospecteye.com/rest/companytype/:companyid`
+`GET http://api.apsislead.com/rest/companytype/:companyid`
 
 Get a companystatus by registerednumber
 
-`GET http://api.prospecteye.com/rest/companytype/registerednumber/:registerednumber`
+`GET http://api.apsislead.com/rest/companytype/registerednumber/:registerednumber`
 
 Insert new status
 
-`POST http://api.prospecteye.com/rest/companytype/`
+`POST http://api.apsislead.com/rest/companytype/`
 
 Post data:
 ```
@@ -189,7 +189,7 @@ Post data:
 
 Update a companystatus with user and/or type
 
-`PUT http://api.prospecteye.com/rest/companytype/:companyid`
+`PUT http://api.apsislead.com/rest/companytype/:companyid`
 
 Put data:
 ```
@@ -201,14 +201,14 @@ Put data:
 
 Update a companystatus with user and/or type by registerednumber
 
-`PUT http://api.prospecteye.com/rest/companytype/registerednumber/:registerednumber`
+`PUT http://api.apsislead.com/rest/companytype/registerednumber/:registerednumber`
 
 REST/Settings
 --------------------
 
 Get settings for user-id
 
-`GET http://api.prospecteye.com/rest/settings/:userid`
+`GET http://api.apsislead.com/rest/settings/:userid`
 
 
 REST/Apikey
@@ -216,6 +216,6 @@ REST/Apikey
 
 Get API-key, accountid and userid with you standard Login
 
-`GET http://api.prospecteye.com/rest/apikey/`
+`GET http://api.apsislead.com/rest/apikey/`
 
 `Params: usermail (string), password (string)`
