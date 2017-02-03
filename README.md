@@ -139,6 +139,31 @@ Get conversions for a specific form and for a specific email
 
 `Params: limit (integer), step (integer)`
 
+Post conversion to a specific form
+`POST http://api.apsislead.com/rest/conversion/:formId`
+
+```
+POST body: {
+   uuid: (string|required),
+   pageurl: (string|required)
+   data: (json-array|required)
+}
+```
+
+Example of data json-array:
+```
+  [
+    {
+      key: 'email',
+      value: 'email@domain.com'
+    },
+    {
+      key: 'firstname',
+      value: 'Firstname'
+    }
+  ]
+```
+
 REST/Company
 --------------------
 
