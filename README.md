@@ -143,11 +143,10 @@ Post conversion to a specific form
 `POST http://api.apsislead.com/rest/conversion/:formId`
 
 ```
-POST body: {
-   uuid: (string|required),
-   pageurl: (string|required)
-   data: (json-array|required)
-}
+POST body
+@Param: uuid (string|required),
+@Param: pageurl (string|required)
+@Param: data (json-array|required)
 ```
 
 Example of data json-array:
