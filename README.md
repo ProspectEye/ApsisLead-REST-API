@@ -91,12 +91,12 @@ Response:
 
 `GET http://api.apsislead.com/rest/visits/betweendates`
 
-`Params: startdate (ex 2012-11-03), enddate (date), limit (int), step (int), filterid (int), withpageviews (boolean)`
+`Params: startdate (ex 2017-03-01), enddate (date), limit (int), step (int), filterid (int), withpageviews (boolean)`
 
 
 `GET http://api.apsislead.com/rest/visits/search`
 
-`Params: query (ex "ProspectEye AB")`
+`Params: query (ex "APSIS International AB")`
 
 You can also get more details about a visit with `visits/details`. Here you will also get all company information
 
@@ -176,7 +176,7 @@ or by registerednumber
 REST/Companytype
 --------------------
 
-There are 6 kinds of statuses on a visitor in ProspectEye
+There are 6 kinds of statuses on a visitor in APSIS Lead
 
 1. Prospect
 2. Customer
